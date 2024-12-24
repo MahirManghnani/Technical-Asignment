@@ -46,8 +46,8 @@ class AnswerProcessor:
             response_dict = json.loads(cleaned_response)
             
             # Extract formula and formatting instructions
-            formula = response_dict.get('function')
-            format_dict = response_dict.get('formatting')
+            formula = response_dict.get('formula')
+            format_dict = response_dict.get('formatting_instructions')
             
             if not formula or not format_dict:
                 raise ValueError("Missing required fields in LLM response")

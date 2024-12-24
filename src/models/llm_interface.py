@@ -2,7 +2,9 @@ import os
 from typing import Dict, Optional, List
 import google.generativeai as genai
 from dataclasses import dataclass
+from utils.env import load_environment
 from ..config.prompts import SYSTEM_PROMPT, INITIAL_PROMPT, format_question_prompt
+
 
 @dataclass
 class LLMConfig:
@@ -25,11 +27,13 @@ class QuestionContext:
 class LLMInterface:
     def __init__(self, api_key: Optional[str] = None):
         """Initialize the LLM interface."""
-        # Use provided API key or get from environment
-        api_key = api_key or os.environ.get("GEMINI_API_KEY")
-        if not api_key:
-            raise ValueError("No API key provided and GEMINI_API_KEY not found in environment")
+        # Load environment variables
+        load_environment()
         
+        # Get API key from environment
+        api_key = os.getenv("GEMINI_API_KEY")
+        if not api_key:
+            raise ValueError("GEMINI_API_KEY not found in environment")
         # Configure the API
         genai.configure(api_key=api_key)
         

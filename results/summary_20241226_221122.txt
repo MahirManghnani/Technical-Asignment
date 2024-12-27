@@ -1,0 +1,9 @@
+Evaluation Results
+=================
+
+Processed 795/795 questions (100.0% complete)
+
+prefix_match_rate: 70.20%
+suffix_match_rate: 72.47%
+decimal_places_match_rate: 31.94%
+mean_smape: 28.01%

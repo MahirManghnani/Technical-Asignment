@@ -1,0 +1,14 @@
+{
+  "accuracies": {
+    "prefix_match_rate": 0.702020202020202,
+    "suffix_match_rate": 0.7247474747474747,
+    "decimal_places_match_rate": 0.3194444444444444,
+    "mean_smape": 28.00765049356458
+  },
+  "metadata": {
+    "processed_questions": 795,
+    "total_questions": 795,
+    "completion_percentage": 100.0,
+    "timestamp": "20241226_221122"
+  }
+}

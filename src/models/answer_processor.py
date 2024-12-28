@@ -1,5 +1,4 @@
 import json
-from typing import Dict
 import re
 from .expression_evaluator import ExpressionEvaluator
 from .answer_formatter import AnswerFormatter
